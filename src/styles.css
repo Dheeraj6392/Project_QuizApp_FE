@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+/* Reset some default browser styles */
+* {
+    margin: 2px;
+    padding: 2px;
+    box-sizing: bprder-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+button, .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}

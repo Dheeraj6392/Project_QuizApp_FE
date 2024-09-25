@@ -1,0 +1,43 @@
+<h1> Quiz App </h1>
+
+<h3> Choose one correct option in following Questions </h3>
+
+ <ng-container *ngFor="let item of data; let i= index">
+    <h3>{{i+1}}: {{item.question}}</h3> 
+    <div>
+     <input type="radio"  id="question1_{{i+1}}" name="question{{i+1}}" [value]="1" [(ngModel)]="ansQuestion[i]"> <label for="question1_{{i+1}}">{{item.option1}}</label>
+     <input type="radio" id="question2_{{i+1}}" name="question{{i+1}}" [value]="2" [(ngModel)]="ansQuestion[i]"> <label for="question2_{{i+1}}">{{item.option2}}</label>
+     <input type="radio"  id="question3_{{i+1}}" name="question{{i+1}}" [value]="3" [(ngModel)]="ansQuestion[i]"> <label for="question3_{{i+1}}">{{item.option3}}</label>
+     <input type="radio" id="question4_{{i+1}}" name="question{{i+1}}" [value]="4" [(ngModel)]="ansQuestion[i]"> <label for="question4_{{i+1}}">{{item.option4}}</label>
+    </div>
+     
+    
+ </ng-container>
+ <div>
+    <button (click)="Submit()" [disabled]="isSubmitted">submit</button>
+ </div>
+ 
+<div *ngIf="isSubmitted" >
+ 
+<h1>Result</h1>
+
+
+<h1> Your Score:  {{resultScore}}/11</h1>
+
+<div class="chart">
+    <canvas id="myDonut" class="item">{{donut}}
+    </canvas>
+    
+    <canvas id="myChart" class="item">{{donut}}
+    </canvas>
+
+    <div class="item">
+       
+        <button *ngFor="let item of correctAns; let i=index" [ngClass]="{ 'correct': item, 'wrong': !item}">{{i+1}}</button>
+        
+      </div>
+    
+  </div>
+
+  
+</div>
