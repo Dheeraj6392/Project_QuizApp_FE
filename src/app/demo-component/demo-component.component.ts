@@ -11,9 +11,33 @@ import { Chart, registerables } from 'chart.js';
 export class DemoComponentComponent implements OnInit {
 
   data: any;
-  ansQuestion: any = [];
+  ansQuestion: any = [
+    // "0_3",
+    // "1_3",
+    // "2_3",
+    // "3_3",
+    // "4_3",
+    // "5_3",
+    // "6_3",
+    // "7_3",
+    // "8_3",
+    // "9_3",
+    // "10_2",
+    // "11_2",
+    // "12_2",
+    // "13_3",
+    // "14_3",
+    // "15_3",
+    // "16_3",
+    // "17_1",
+    // "18_3",
+    // "19_4",
+    // "20_4",
+    // "21_2"
+];
   isSubmitted: boolean = false;
   correctAns: any = [];
+
   resultScore: number = 0;
   chart: any;
   donut: any;
@@ -77,8 +101,9 @@ export class DemoComponentComponent implements OnInit {
     this.api.getCountMatches(this.ansQuestion).subscribe((response) => {
       this.resultScore = response.score;
       this.correctAns = response.correctAns;
-      this.val2 = (11 - this.resultScore).toString(); // Assuming 11 is total possible score
-
+      this.val2 = (this.data.length - this.resultScore).toString(); // Assuming 11 is total possible score
+      console.log("val",this.val2);
+      
       // Configure the donut chart based on the response
       this.configdonut = {
         type: 'pie',
