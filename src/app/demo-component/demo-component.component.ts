@@ -12,28 +12,28 @@ export class DemoComponentComponent implements OnInit {
 
   data: any;
   ansQuestion: any = [
-    // "0_3",
-    // "1_3",
-    // "2_3",
-    // "3_3",
-    // "4_3",
-    // "5_3",
-    // "6_3",
-    // "7_3",
-    // "8_3",
-    // "9_3",
-    // "10_2",
-    // "11_2",
-    // "12_2",
-    // "13_3",
-    // "14_3",
-    // "15_3",
-    // "16_3",
-    // "17_1",
-    // "18_3",
-    // "19_4",
-    // "20_4",
-    // "21_2"
+    "0_3",
+    "1_3",
+    "2_3",
+    "3_3",
+    "4_3",
+    "5_3",
+    "6_3",
+    "7_3",
+    "8_3",
+    "9_3",
+    "10_2",
+    "11_2",
+    "12_2",
+    "13_3",
+    "14_3",
+    "15_3",
+    "16_3",
+    "17_1",
+    "18_3",
+    "19_4",
+    "20_4",
+    "21_2"
 ];
   isSubmitted: boolean = false;
   correctAns: any = [];
@@ -46,7 +46,7 @@ export class DemoComponentComponent implements OnInit {
   public config: any = {
     type: 'bar',
     data: {
-      labels: ['A', 'B', 'C', 'A', 'B', 'C', 'D'],
+      labels: ['JAVA', 'PYTHON', 'C++', 'C#', 'GOLANG', 'HINDI', 'ENGLISH'],
       datasets: [{
         label: 'My First Dataset',
         data: [65, 59, 80, 81, 56, 55, 40],
